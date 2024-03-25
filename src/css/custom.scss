@@ -1,0 +1,49 @@
+:root {
+  --ifm-color-primary: #1b1b1d;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --hero-color: #111b24;
+  --dot-color: rgb(238, 255, 125);
+}
+
+[data-theme="dark"] {
+  --dot-color: #3cad6e;
+  --hero-color: #1b1b1d;
+  --ifm-color-primary: #344bab;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+// Scrollbar CSS
+html *::-webkit-scrollbar {
+  border-radius: 0.5rem;
+  width: 6px;
+}
+
+html *::-webkit-scrollbar-thumb {
+  border-radius: var(--border-radius-primary);
+  background: #c2c2c2;
+}
+
+html *::-webkit-scrollbar-track {
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+}

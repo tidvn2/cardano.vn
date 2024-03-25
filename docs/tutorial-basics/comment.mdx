@@ -1,0 +1,62 @@
+---
+sidebar_position: 1
+---
+
+# cách setup comment
+
+
+# settup github
+
+vào https://github.com/ đăng ký tài khoản 
+
+vào https://github.com/new tạo mới một  repository
+
+![enter image description here](https://i.imgur.com/l3Sg5h9.png)
+vào setting
+![enter image description here](https://i.imgur.com/M2McNSW.png)
+kéo xuống phần Features , chọn "Set up discussions" , sửa những thông tin ở "Start a new discussion" và nhấn "start discussion"
+![enter image description here](https://i.imgur.com/9JZun9E.png)
+
+![enter image description here](https://i.imgur.com/daTw2dK.png)
+## setup  Giscus
+vào trang https://github.com/apps/giscus  
+nhấn config , 
+ở phần Repository access  thì chọn "only"  repo vừa tạo  
+![enter image description here](https://i.imgur.com/r8FbAJx.png)
+
+## lấy repository API key
+
+Đăng nhập vào [GraphQL API Explorer](https://docs.github.com/en/graphql/overview/explorer). 
+và dán đoạn code bên dưới , nhớ thay nameOfYourGitHubAccount , nameOfCreatedRepository tương ứng 
+**lưu lại 2 thông tin id của repository và General tương ứng**  
+
+   ```
+query { 
+  repository(owner: "nameOfYourGitHubAccount", name:"nameOfCreatedRepository"){
+    id
+    discussionCategories(first:10) {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
+  }
+}
+```
+![enter image description here](https://i.imgur.com/ZSGWRdo.png)
+
+## Sửa Code
+mở file docusaurus.config.ts và thay thế tương ứng
+![](https://i.imgur.com/goeKv42.png)
+
+## comment 
+![enter image description here](https://i.imgur.com/4H1ZnBx.png)
+![enter image description here](https://i.imgur.com/HkRvuXN.png)
+
+## Quản lý comment 
+
+truy cập reposive trên github , vào phần discussions sẽ thấy những comment xuất hiện ở đây 
+![enter image description here](https://i.imgur.com/RGEmk74.png) 
+![](https://i.imgur.com/NW0NMXV.png)

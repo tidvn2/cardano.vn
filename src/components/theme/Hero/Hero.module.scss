@@ -1,0 +1,145 @@
+.heroBanner {
+    height: 100vh;
+    padding: 4rem 0;
+    background-color: var(--hero-color);
+}
+
+.button {
+    padding: 8px 15px;
+    white-space: nowrap;
+}
+
+#tsparticles {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+.heroContentContainer {
+    z-index: 1;
+}
+
+@media screen and (max-width: 996px) {
+    .heroBanner {
+        padding: 2rem;
+    }
+
+    .toggleText {
+        display: none;
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.banner-inner {
+    display: flex;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    width: 50%;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.banner-image-wrapper {
+    width: 50%;
+}
+
+.banner-image-container {
+    width: 100%;
+    animation: bounce 2s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.branner-image {
+    width: 70%;
+    filter: drop-shadow(0 0 4px rgb(255, 255, 255));
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(-3%);
+        animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    }
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+.banner-title {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.banner-title-up {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.banner-title-down {
+    font-weight: 700;
+}
+.banner-intro {
+    margin-bottom: 14px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.banner-button {
+    display: inline-block;
+    width: fit-content;
+    padding: 10px 40px;
+    border-radius: 12px;
+    color: #ffffff !important;
+    text-decoration: none;
+    background-color: var(--ifm-color-primary-dark);
+    transition: all 0.3s ease 0s;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: none !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .banner {
+        height: fit-content;
+        position: relative;
+    }
+    .banner-inner {
+        flex-direction: column;
+    }
+
+    .banner-content {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .banner-image-wrapper {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+}

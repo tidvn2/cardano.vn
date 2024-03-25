@@ -1,0 +1,23 @@
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 80px;
+}
+
+.eventList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.event-item {
+  padding-top: 80% !important;
+}
+
+@media screen and (max-width: 768px) {
+  .eventList {
+    grid-template-columns: 1fr;
+  }
+}
